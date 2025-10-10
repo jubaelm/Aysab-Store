@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Aysab-Store
 
-## Getting Started
+Aysab Store is an e-commerce platform developed using Next.js, offering a modern and responsive shopping experience.
 
-First, run the development server:
+## Project Goal
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The goal of Aysab Store is to develop a fully functional, scalable, and user-friendly e-commerce web application.  
+It aims to provide a seamless shopping experience with fast performance, responsive design, and intuitive navigation.  
+The project leverages modern web technologies like Next.js, TypeScript, and Redux to ensure maintainability and extensibility for future features.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Modern Frontend Framework**: Built with Next.js for efficient routing and server-side rendering.
+- **Responsive Design**: Utilizes Tailwind CSS for a mobile-first, utility-first approach to styling.
+- **TypeScript Integration**: Ensures type safety and improved developer experience.
+- **ESLint Configuration**: Enforces consistent code quality and style across the codebase.
+- **State Management**: Implements Redux for predictable state management.
+- **Persistent State**: Uses Redux Persist to maintain state across sessions.
+- **Mock Data Backend**: Simulates backend interactions using static JSON data for development purposes.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Product Catalog**: Browse a variety of AYSAB-branded merchandise, including apparel and accessories.
+- **Shopping Cart**: Add items to your cart and proceed to checkout with ease.
+- **User Authentication**: Secure login and registration system for personalized shopping experiences.
+- **Responsive Design**: Optimized for various devices, ensuring a smooth experience on desktops, tablets, and mobile devices.
+- **Admin Panel**: Manage products, orders, and user accounts through a secure backend interface.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Installation
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+To get started with the project locally:
+
+1. Clone the repository:
+   git clone https://github.com/jubaelm/Aysab-Store.git
+
