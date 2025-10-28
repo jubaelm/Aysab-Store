@@ -14,7 +14,7 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
-import getUserSession from '@/actions/auth/gettingUserSession';
+import getUserSession from '@/actions/auth/getUserSession';
 import logoutAction from '@/actions/auth/logout';
 import { useRouter } from 'next/navigation';
 import { IUserEntity } from 'oneentry/dist/users/usersInterfaces';
@@ -87,7 +87,7 @@ export default function Navbar() {
         <div className='flex items-center justify-between h-16'>
           <div className='flex items-center'>
             <Link href='/' className='flex-shrink-0'>
-              <span className='text-2xl font-bold bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 bg-clip-text text-transparent'>
+              <span className='text-2xl font-bold bg-gradient-to-r from-blue-600 via-pink-500 to-blue-500 bg-clip-text text-transparent'>
                 AYSAB STORE
               </span>
             </Link>
