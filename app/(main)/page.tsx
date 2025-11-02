@@ -17,22 +17,10 @@ export default function HomePage() {
     const getData = async () => {
       const catalogs = await getCatalogWithProducts();
 
-      if (catalogs?.length) {
-        const transformedCatalogs = catalogs.map((catalog) => ({
-          ...catalog,
-          catalogProducts: {
-            items: catalog.catalogProducts.items.map(
-              (item: { localizeInfos: { title: string } }) => ({
-                ...item,
-                localizeInfos: {
-                  title: item.localizeInfos?.title || 'Default Title',
-                },
-              })
-            ),
-          },
-        }));
-        setProducts(transformedCatalogs);
-      }
+      if (catalogs?.length) setProducts(catalogs);
+
+        
+      
       setIsLoading(false);
     };
     getData();
@@ -53,6 +41,7 @@ export default function HomePage() {
                   favorite team. Shop now and enjoy a seamless shopping
                   experience!
                 </p>
+
                 <img
                   src='https://scontent-lga3-2.xx.fbcdn.net/v/t51.82787-15/568648802_18058879484626822_1225103204958886956_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=AEajHsI6nNcQ7kNvwGAnypl&_nc_oc=AdlDvUOaUWfDtwoJqez66Ip2idHOwk755qb10_M4bGzjTY-2WyfoGWuffOmnr9cea8zaRYkCtTT_82oXVRsPXrMV&_nc_zt=23&_nc_ht=scontent-lga3-2.xx&_nc_gid=n4xq2ncsGNNRww5ad3PXcg&oh=00_AfdmWBgNV-HcOjYE3gRFFrykxLL_mUCT4Zl9x34yJhzZFg&oe=6905E545'
                   alt='Hero Image'
@@ -71,13 +60,12 @@ export default function HomePage() {
             <div className='animate-spin rounded-full h-10 w-10 border-b-2 border-purple-900'></div>
           </div>
         )}
+
         {products.map((catalog) => (
           <ProductCatalog
             key={catalog?.id}
             title={catalog?.localizeInfos?.title}
-            products={
-              catalog.catalogProducts.items
-            }
+            products={catalog.catalogProducts.items}
           />
         ))}
       </main>

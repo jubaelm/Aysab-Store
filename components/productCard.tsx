@@ -28,20 +28,22 @@ const ProductCard = ({ product }: { product: any }) => {
               {product.attributeValues.p_title.value}
             </h3>
           </Link>
+
           <div
             className='text-gray-500 line-clamp-2 text-sm mb-2'
             dangerouslySetInnerHTML={{ __html: product.attributeValues.p_description.value[0].htmlValue, }
             }
           />
+
           <p className='text-gray-600'>
             ${product.attributeValues.p_price.value.toFixed(2)}
           </p>
         </div>
+
+
         <div className='p-4'>
-          <Button
-            className='w-full bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 hover:from-purple-600 hover:via-pink-600 hover:to-red-600 text-white font-semibold cursor-pointer'
-            
-          >
+          <Button className='w-full bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 hover:from-purple-600 hover:via-pink-600 hover:to-red-600 text-white font-semibold cursor-pointer'> 
+           
             <ShoppingCart className='w-5 h-5 mr-2' />
             Add to Cart
           </Button>
