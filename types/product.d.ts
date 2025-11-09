@@ -1,13 +1,14 @@
 export interface IProduct {
-    id: any;
+    id: number;
 
-    localizeInfos: { title: any};
+    localizeInfos: { title: Record<string, any>};
 
-    price: any;
+    price: number | null;
 
     attributeValues: {
-        p_image: { value: { downloadLink: any } };
-
-        p_title: { value: any };
-    };
+        p_description: { value: { htmlValue: string }[] };
+    p_price: { value: number };
+    p_image: { value: { downloadLink: string } };
+    p_title: { value: string };
+  };
 }

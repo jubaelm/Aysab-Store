@@ -2,6 +2,14 @@ import Navbar from '@/components/Navbar';
 
 import React from 'react';
 
+
+
+
+export const metadata = {
+    title: 'AYSAB Official Store',
+    description: 'Official store for AYSAB merchandise and gear.',
+};
+
 const layout = ({
     children,
     }: Readonly<{

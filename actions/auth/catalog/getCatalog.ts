@@ -12,7 +12,7 @@ export const getCatalogs = async (): Promise<IPagesEntity[]> => {
       (page: { type: string }) => page.type === 'catalog_page'
     );
 
-    // this returns array
+    // returns array
     return catalogPages?.length ? catalogPages : [];
   } catch (error) {
     console.error({ error });

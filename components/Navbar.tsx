@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import useCartStore from '@/stores/cartStore';
 import { ShoppingCart, User, Menu, X, LogOut } from 'lucide-react';
 import {
   DropdownMenu,
@@ -27,7 +28,7 @@ export default function Navbar() {
   const [isLoading, setIsLoading] = useState(true);
   const mobileMenuRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
- 
+  const cartItems = useCartStore((state) => state.cart);
 
   useEffect(() => {
     async function fetchUser() {
@@ -113,7 +114,11 @@ export default function Navbar() {
                   variant='ghost'
                 >
                   <ShoppingCart className='h-5 w-5 text-gray-600 hover:text-purple-500' />
-                  
+                  {cartItems.length > 0 && (
+                    <span className='absolute top-[-3px] right-[-3px] inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white bg-red-500 rounded-full'>
+                      {cartItems.length}
+                    </span>
+                  )}
                 </Button>
               </Link>
             </div>
