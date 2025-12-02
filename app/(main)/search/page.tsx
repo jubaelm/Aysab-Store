@@ -2,7 +2,7 @@
 
 import { useState, useEffect, Suspense } from 'react';
 
-import { searchProductsAction } from '@/actions/auth/catalog/searchProducts';
+import { searchProductsAction } from '@/actions/catalog/searchProducts';
 import { useSearchParams } from 'next/navigation';
 import ProductCard from '@/components/productCard';
 import { IProductsEntity } from 'oneentry/dist/products/productsInterfaces';

@@ -87,8 +87,13 @@ export default function Navbar() {
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b-2 border-gray-200'>
         <div className='flex items-center justify-between h-16'>
           <div className='flex items-center'>
-            <Link href='/' className='flex-shrink-0'>
-              <span className='text-2xl font-bold bg-gradient-to-r from-blue-600 via-pink-500 to-blue-500 bg-clip-text text-transparent'>
+            <Link href='/' className='flex items-center gap-3 flex-shrink-0'>
+            <img 
+              src="/Logo.png"     
+           
+           className="h-14 w-auto"
+               />
+              <span className='text-2xl font-medium bg-gradient-to-r from-blue-600 via-pink-500 to-blue-500 bg-clip-text text-transparent'>
                 AYSAB STORE
               </span>
             </Link>

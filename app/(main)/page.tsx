@@ -3,7 +3,7 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import { useEffect, useState } from 'react';
-import { getCatalogWithProducts } from '@/actions/auth/catalog/getCatalogWithProducts';
+import { getCatalogWithProducts } from '@/actions/catalog/getCatalogWithProducts';
 
 import ProductCatalog from '@/components/productCatalog';
 import { ICatalog } from '@/types/catalog';
@@ -55,7 +55,7 @@ export default function HomePage() {
                 </p>
 
                 <img
-                  src='https://scontent-lga3-2.xx.fbcdn.net/v/t51.82787-15/568648802_18058879484626822_1225103204958886956_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=AEajHsI6nNcQ7kNvwGAnypl&_nc_oc=AdlDvUOaUWfDtwoJqez66Ip2idHOwk755qb10_M4bGzjTY-2WyfoGWuffOmnr9cea8zaRYkCtTT_82oXVRsPXrMV&_nc_zt=23&_nc_ht=scontent-lga3-2.xx&_nc_gid=n4xq2ncsGNNRww5ad3PXcg&oh=00_AfdmWBgNV-HcOjYE3gRFFrykxLL_mUCT4Zl9x34yJhzZFg&oe=6905E545'
+                  src="herobanner.jpg"
                   alt='Hero Image'
                   className='absolute inset-0 w-full h-full object-cover opacity-25 z-1'
                 />
