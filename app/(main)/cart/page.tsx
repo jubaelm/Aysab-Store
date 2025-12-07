@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import  createOrder  from '@/actions/orders/create-order';
 import {
   ShoppingCart,
   Trash2,
@@ -17,6 +18,7 @@ import getUserSession from '@/actions/auth/getUserSession';
 import { IUserEntity } from 'oneentry/dist/users/usersInterfaces';
 
 import { IOrderData } from 'oneentry/dist/orders/ordersInterfaces';
+import { create } from 'domain';
 
 export default function CartPage() {
   const router = useRouter();
@@ -55,6 +57,21 @@ export default function CartPage() {
   );
   const tax = subtotal * 0.1; 
   const total = subtotal + tax;
+
+  const createOrderAndCheckout = async () => {
+    const data: IOrderData = {
+      formData: [],
+      formIdentifier: 'order_form',
+      paymentAccountIdentifier: 'stripe_payment',
+      products: cartItems.map((item) => ({
+        productId: item.id,
+        quantity: item.quantity,
+      })),
+    };
+    const url = await createOrder(data);
+    clearCart();
+    router.push(url);
+  };
 
  
 
@@ -168,6 +185,7 @@ export default function CartPage() {
                 <Button
                   className='w-full mt-6 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 hover:from-purple-600 hover:via-pink-600 hover:to-red-600 text-white font-semibold cursor-pointer'
                   disabled={!cartItems.length}
+                  onClick={createOrderAndCheckout}
                  
                 >
                   <CreditCard className='mr-2 h-5 w-5' />
