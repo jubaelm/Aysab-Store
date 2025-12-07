@@ -4,6 +4,7 @@ import { URL } from 'node:url';
 import React from 'react';
 
 
+import Footer from '@/components/footer';
 
 
 export const metadata = {
@@ -24,10 +25,13 @@ const layout = ({
         <div className=''>
             <Navbar/>
             <div className='py-20'>{children}</div>
+       <Footer/>
         </div>
     );
 
 };
+
+
 
 export default layout;
 

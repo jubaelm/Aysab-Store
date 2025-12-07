@@ -44,11 +44,11 @@ export const handleLoginSubmit = async (inputValues: {
     }
 
     (await cookies()).set('access_token', response.accessToken, {
-      maxAge: 60 * 60 * 24,
+      maxAge: 60 * 60 * 24, // 24 hours
     });
 
     (await cookies()).set('refresh_token', response.refreshToken, {
-      maxAge: 60 * 60 * 24 * 7, 
+      maxAge: 60 * 60 * 24 * 7, // 7 days
     });
   } catch (error: any) {
     console.error(error);

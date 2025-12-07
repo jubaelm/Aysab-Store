@@ -1,4 +1,4 @@
-"use server";
+'use server';
 import { IAttributes } from "oneentry/dist/base/utils";
 import { fetchApiClient } from "@/lib/oneentry";
 import { ISignUpData } from "oneentry/dist/auth-provider/authProvidersInterfaces";
@@ -24,18 +24,18 @@ export const handleSignupSubmit = async (inputValues: {
     const data: ISignUpData = {
       formIdentifier: "sign_up",
       authData: [
-        { marker: "email", value: inputValues.email },
-        { marker: "password", value: inputValues.password },
+        { marker: 'email', value: inputValues.email },
+        { marker: 'password', value: inputValues.password },
       ],
-      formData: [{ marker: "name", type: "string", value: inputValues.name }],
+      formData: [{ marker: 'name', type: 'string', value: inputValues.name }],
       notificationData: {
         email: inputValues.email,
-        phonePush: ["+1234567890"], 
-        phoneSMS: "+1234567890", 
+        phonePush: ["+1234567890"], // Dummy phone number
+        phoneSMS: "+1234567890", // Dummy phone number
       },
     };
 
-    const value = await apiClient?.AuthProvider.signUp("email", data);
+    const value = await apiClient?.AuthProvider.signUp('email', data);
     return value;
   } catch (error: any) {
     console.error(error);
